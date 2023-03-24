@@ -8,6 +8,9 @@ function onFormSubmit(event){
     const password = formElements.password;
     const formData = new FormData(event.currentTarget);
     console.log(formData);
+    const obj = [`${email.value}, ${password.value}`]
+    console.log(obj);
+    loginForm.reset();
 
     formData.forEach((name, value) => {
         console.log('onFormSubmit -> name', name);
